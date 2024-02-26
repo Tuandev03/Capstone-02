@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
-  <body>
+  <body >
     <header class="">
       <div class="py-4 header">
         <div class="container">
@@ -172,9 +172,293 @@
         </div>
       </nav>
     </header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
+    <main>
+      <!-- Banner -->
+      <section class="banner">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="true"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./imgs/banner-img.jpg"
+                class="d-block w-100 banner-img"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./imgs/banner-img-2.jpg"
+                class="d-block w-100 banner-img"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>
+                  Some representative placeholder content for the second slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./imgs/banner-img-3.jpg"
+                class="d-block w-100 banner-img"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!-- Branch -->
+      <section class="branch py-lg-4 py-sm-2 py-md-3">
+        <div class="container">
+          <div class="branch-list">
+            <img src="./imgs/logo-img-1.svg" alt="" class="branch-img" />
+            <img src="./imgs/logo-img-2.svg" alt="" class="branch-img" />
+            <img src="./imgs/logo-img-3.svg" alt="" class="branch-img" />
+            <img src="./imgs/logo-img-4.svg" alt="" class="branch-img" />
+            <img src="./imgs/logo-img-5.svg" alt="" class="branch-img" />
+          </div>
+        </div>
+      </section>
+      <!-- About -->
+      <section class="about py-lg-4 py-sm-2">
+        <div class="container">
+          <div class="about-inner">
+            <div class="about-left">
+              <img class="about-img" src="./imgs/img-1.jpg" alt="" />
+            </div>
+            <div class="about-right">
+              <h4 class="about-title">ABOUT US</h4>
+              <h2 class="about-heading">
+                Selected materials designed for comfort and sustainability
+              </h2>
+              <p class="about-desc">
+                Nullam auctor faucibus ridiculus dignissim sed et auctor sed
+                eget auctor nec sed elit nunc, magna non urna amet ac neque ut
+                quam enim pretium risus gravida ullamcorper adipiscing at ut
+                magna.
+              </p>
+              <a href="" class="about-link">Read more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Seller -->
+      <section class="seller py-lg-5">
+        <div class="container">
+          <div class="seller-info">
+            <h2 class="seller-heading">Our Best Seller</h2>
+            <a href="" class="seller-link"> View All Best Seller</a>
+          </div>
+          <ul class="seller-list"></ul>
+        </div>
+        <img src="" alt="" />
+      </section>
+      <!-- Our Customer  -->
+      <section class="customer">
+        <div class="container">
+          <h2 class="customer-heading">Our Customer speak for us</h2>
+          <ul class="customer-list">
+            <li class="customer-item">
+              <ul class="customer-rates">
+                <li class="customer-rate">
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                </li>
+              </ul>
+              <h3 class="customer-desc">
+                “Felis semper duis massa scelerisque ac amet porttitor ac tellus
+                venenatis aliquam varius mauris integer”
+              </h3>
+              <div class="customer-info">
+                <img
+                  src="./imgs/customer-img-1.jpg"
+                  alt=""
+                  class="customer-img"
+                />
+                <p class="customer-name">Julia Keys</p>
+              </div>
+            </li>
+            <li class="customer-item">
+              <ul class="customer-rates">
+                <li class="customer-rate">
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                </li>
+              </ul>
+              <h3 class="customer-desc">
+                “Felis semper duis massa scelerisque ac amet porttitor ac tellus
+                venenatis aliquam varius mauris integer”
+              </h3>
+              <div class="customer-info">
+                <img
+                  src="./imgs/customer-img-1.jpg"
+                  alt=""
+                  class="customer-img"
+                />
+                <p class="customer-name">Julia Keys</p>
+              </div>
+            </li>
+            <li class="customer-item">
+              <ul class="customer-rates">
+                <li class="customer-rate">
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                  <i class="fa-solid fa-star customer-icon"></i>
+                </li>
+              </ul>
+              <h3 class="customer-desc">
+                “Felis semper duis massa scelerisque ac amet porttitor ac tellus
+                venenatis aliquam varius mauris integer”
+              </h3>
+              <div class="customer-info">
+                <img
+                  src="./imgs/customer-img-1.jpg"
+                  alt=""
+                  class="customer-img"
+                />
+                <p class="customer-name">Julia Keys</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-list">
+          <li class="footer-item">
+            <h2 class="footer-heading">PLASHOE</h2>
+            <p class="footer-desc">
+              Praesent eget tortor sit risus egestas nulla pharetra ornare quis
+              bibendum est bibendum sapien proin nascetur
+            </p>
+          </li>
+          <li class="footer-item">
+            <h2 class="footer-heading">Shop</h2>
+            <ul class="footer-list-inner">
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Shop Men</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Shop Women</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Look Book</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Gift Card</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Sale</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer-item">
+            <h2 class="footer-heading">About</h2>
+            <ul class="footer-list-inner">
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Out Story</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Out Materials</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Out Value</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Manufacture</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Sustainability</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer-item">
+            <h2 class="footer-heading">Need Help?</h2>
+            <ul class="footer-list-inner">
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">FAQ</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Shipping</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Shoe Card</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Size Card</a>
+              </li>
+              <li class="footer-inner-item">
+                <a href="" class="footer-inner-link">Contact</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script

@@ -1,0 +1,38 @@
+@use "../abstracts";
+.footer {
+  padding: 70px 0;
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    @include abstracts.screen(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include abstracts.screen(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &-heading {
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &-desc {
+    line-height: 1.6;
+    color: #9a9a9a;
+    &:hover {
+      color: #000;
+    }
+  }
+  &-inner {
+    &-link {
+      color: #9a9a9a;
+
+      margin: 10px 0;
+      display: inline-block;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
