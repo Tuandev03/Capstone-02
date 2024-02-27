@@ -11,8 +11,7 @@ let getValueProduct = () => {
           return `<li class="seller-item">
         <div class="seller-media">
         <img class="seller-img" src="${product.image}" alt=""></img>
-        <a href="" class="seller-btn">Quick View</a>
-        
+        <a href="./pages/detail.html" class="seller-btn">Quick View</a>
         </div>
             <div class="seller-content">
             <p class="seller-name">${product.name}</p>
