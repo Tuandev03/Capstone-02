@@ -33,7 +33,7 @@
     />
     <!-- Style CSS -->
     <!-- <link rel="stylesheet" href="../scss/variables/_index.scss" /> -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
 
   <body>
@@ -176,9 +176,80 @@
     <main>
       <div class="detail">
         <div class="container">
-          <div class="detail_content"></div>
+          <div class="detail_content">
+            <div class="detail_left">
+              <div class="product_image">
+                <img id="product_img" src="" alt="productDetail_img" />
+              </div>
+            </div>
+            <div class="detail_right">
+              <div class="categories">
+                <a href=""></a>
+              </div>
+              <div class="product_title">
+                <h1 id="product_name"></h1>
+              </div>
+              <p class="product_price">
+                <del id="old_price"></del>
+                <span id="new_price"></span>
+              </p>
+              <span class="shipping_text"> & Free Shipping</span>
+              <div class="product_description"></div>
+              <form action="" class="cart">
+                <div class="shoes_sizes"></div>
+                <button type="submit" name="add_to_cart" id="add_to_cart">
+                  Add to Cart
+                </button>
+              </form>
+              <div class="product_categories">
+                <span class="posted_in"> Categories: </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <!-- Related Product -->
+      <section class="related_product py-lg-5">
+        <div class="container">
+          <h2>Related products</h2>
+          <div class="related_product_content">
+            <ul class="related_product_list">
+              <!-- <li class="related_product_item">
+                <span class="sale_circle">Sale!</span>
+                <div class="related_product_media">
+                  <a href="" class="related_link">
+                    <img
+                      class="related_product_img"
+                      src="https://shop.cyberlearn.vn/images/adidas-prophere-black-white.png"
+                      alt=""
+                    />
+                  </a>
+                  <a href="" class="quick_view_btn">Quick View</a>
+                </div>
+                <div class="related_product_info">
+                  <p class="product_name">Adidas Prophere Black White</p>
+                  <div class="price">
+                    <del class="old_price product_price">$300</del>
+                    <span class="product_price">$300</span>
+                  </div>
+                </div>
+                <ul class="related_product_rate">
+                  <li class="related_product_rate-item">
+                    <div class="rating_star">
+                      <i class="fa-regular fa-star related_product_icon"></i>
+                      <i class="fa-regular fa-star related_product_icon"></i>
+                      <i class="fa-regular fa-star related_product_icon"></i>
+                      <i class="fa-regular fa-star related_product_icon"></i>
+                      <i class="fa-regular fa-star related_product_icon"></i>
+                    </div>
+                  </li>
+                </ul>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+        <img src="" alt="" />
+      </section>
     </main>
     <footer>
       <!-- place footer here -->
@@ -204,6 +275,6 @@
     ></script>
 
     <script src="../js/detail.js"></script>
-    <script src="main.js"></script>
+    <script src="../main.js"></script>
   </body>
 </html>
