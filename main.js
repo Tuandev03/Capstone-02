@@ -7,7 +7,7 @@ let getValueProduct = () => {
     .then((response) => {
       let productList = document.querySelector(".seller-list");
       productList.innerHTML = response.data.content
-        .map(function (product) {
+        .map((product) => {
           return `<li class="seller-item">
         <div class="seller-media">
         <img class="seller-img" src="${product.image}" alt=""></img>
