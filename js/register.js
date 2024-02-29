@@ -1,12 +1,12 @@
 // text
 
-function NguoiDung () {
-    this.email = '';
-    this.password = '';
-    this.name = '';
-    this.gender = true;
-    this.phone = '';
-  }
+// function NguoiDung () {
+//     this.email = '';
+//     this.password = '';
+//     this.name = '';
+//     this.gender = true;
+//     this.phone = '';
+//   }
   
   let arrIdInput = ['email','password','passwordConfirm','name','phone'];
   let arrIdNotiInput = ['tbEmail','tbPassword','tbPasswordConfirm','tbName','tbPhone'];
