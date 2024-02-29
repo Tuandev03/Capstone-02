@@ -179,11 +179,25 @@ main {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 575.98px) {
+  .container-reg {
+    width: 450px;
+    height: 380px;
+    margin-top: 50px;
+    overflow: scroll;
+  }
+}
+@media (max-width: 767.98px) {
+  .container-reg .form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 .container-reg h2 {
   text-align: center;
   font-size: 26px;
   font-weight: bold;
-  color: white;
+  color: black;
   padding-bottom: 8px;
   border-bottom: 1px solid silver;
 }
@@ -222,7 +236,7 @@ main {
   padding: 10px;
   display: block;
   font-size: 20px;
-  color: white;
+  color: black;
   border: none;
   border-radius: 5px;
   background-image: linear-gradient(to right, white, rgb(242, 222, 222));
@@ -231,6 +245,24 @@ main {
 }
 .container-reg .button-container button:hover {
   background: linear-gradient(to left, white, rgb(242, 222, 222));
+}
+@media (max-width: 575.98px) {
+  .container-reg .form-control {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .container-reg .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 575.98px) {
+  .container-reg .form-col {
+    width: 100%;
+    padding: 0 !important;
+  }
 }
 
 .header {
