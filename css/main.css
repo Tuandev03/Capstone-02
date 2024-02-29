@@ -155,6 +155,84 @@ h1 {
   color: #979a9b;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, white, rgb(242, 222, 222));
+}
+
+.container-reg {
+  max-width: 650px;
+  padding: 28px;
+  margin: 0 28px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.container-reg h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 8px;
+  border-bottom: 1px solid silver;
+}
+.container-reg .content-reg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.container-reg .content-reg input {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-bottom: 15px;
+}
+.container-reg .content-reg input:nth-child(2n) {
+  justify-content: end;
+}
+.container-reg .content-reg input input {
+  height: 40px;
+  width: 95%;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.container-reg .content-reg input input :is(:focus, :valid) {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container-reg .button-container {
+  margin: 15px 0;
+}
+.container-reg .button-container button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  display: block;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, white, rgb(242, 222, 222));
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container-reg .button-container button:hover {
+  background: linear-gradient(to left, white, rgb(242, 222, 222));
+}
+
 .header {
   width: 100%;
   background-color: #fff;

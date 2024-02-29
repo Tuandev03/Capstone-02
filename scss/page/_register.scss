@@ -1,1 +1,83 @@
-@use "../variables"
+@use "../variables";
+$color-res: white;
+$color-res1:rgb(242, 222, 222);
+$color-res-black: black;
+$box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$color-res-bg: linear-gradient(to right, $color-res, $color-res1);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   background-image: $color-res-bg;
+}
+.container-reg{
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+     box-shadow: $box-shadow;
+    background: rgba(0, 0, 0, 0.2);
+    h2{
+        text-align: center;
+        font-size: 26px;
+    font-weight: bold;
+    color: $color-res;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+    }
+    .content-reg{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 0;
+        input{
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            padding-bottom: 15px;
+            &:nth-child(2n){
+                justify-content: end;
+            }
+            input{
+                height: 40px;
+                width: 95%;
+                padding: 0 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                outline: none;
+                :is(:focus,:valid){
+                    box-shadow: $box-shadow;
+                }
+            }
+        }
+    }
+    .button-container{
+        margin: 15px 0;
+        button{
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            display: block;
+            font-size: 20px;
+            color:$color-res;
+            border: none;
+            border-radius: 5px;
+            background-image: $color-res-bg;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                background: linear-gradient(to left,$color-res,$color-res1);
+            }
+        }
+     
+    }
+}
