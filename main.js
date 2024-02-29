@@ -1,3 +1,5 @@
+let $ = document.querySelector.bind(document);
+let $$ = document.querySelectorAll.bind(document);
 let getValueProduct = () => {
   let promise = axios({
     url: "https://shop.cyberlearn.vn/api/Product",
@@ -11,7 +13,7 @@ let getValueProduct = () => {
           return `<li class="seller-item">
         <div class="seller-media">
         <img class="seller-img" src="${product.image}" alt=""></img>
-        <a href="./pages/detail.html" class="seller-btn">Quick View</a>
+        <a href="" class="seller-btn">Quick View</a>
         </div>
             <div class="seller-content">
             <p class="seller-name">${product.name}</p>
@@ -36,10 +38,18 @@ let getValueProduct = () => {
         })
 
         .join("");
-      console.log(response.data);
+      // console.log(response.data);
     })
     .catch((error) => {
       console.error("Error fetching products:", error);
     });
 };
 getValueProduct();
+
+// window.onload = function () {
+//   const urlParams = new URLSearchParams(window.location.search);
+//   const myParam = urlParams.get("productId");
+// };
+document.querySelector(".seller-btn").onclick = () => {
+  console.log("123");
+};
