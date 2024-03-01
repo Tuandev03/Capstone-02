@@ -1,3 +1,7 @@
+// import { getProductById } from "./js/detail.js";
+
+import { getProductById, renderDetailProduct } from "./js/detail.js";
+
 let $ = document.querySelector.bind(document);
 let $$ = document.querySelectorAll.bind(document);
 let getValueProduct = () => {
@@ -13,7 +17,7 @@ let getValueProduct = () => {
           return `<li class="seller-item">
         <div class="seller-media">
         <img class="seller-img" src="${product.image}" alt=""></img>
-        <a href="" class="seller-btn">Quick View</a>
+        <a href="#" id="quick-view" class="seller-btn" data-product-id="${product.id}">Quick View</a>
         </div>
             <div class="seller-content">
             <p class="seller-name">${product.name}</p>
@@ -38,7 +42,21 @@ let getValueProduct = () => {
         })
 
         .join("");
-      // console.log(response.data);
+
+      // Sự kiện khi click vào nút "Quick View"
+      const quickViewButtons = document.querySelectorAll(".seller-btn");
+      quickViewButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          const productId = event.target.dataset.productId;
+          getProductById(productId);
+        });
+      });
+
+      renderDetailProduct(product);
+      // Hàm hiển thị chi tiết sản phẩm
+
+      // Gọi API lấy danh sách sản phẩm và render khi trang được load
     })
     .catch((error) => {
       console.error("Error fetching products:", error);
@@ -50,6 +68,3 @@ getValueProduct();
 //   const urlParams = new URLSearchParams(window.location.search);
 //   const myParam = urlParams.get("productId");
 // };
-document.querySelector(".seller-btn").onclick = () => {
-  console.log("123");
-};

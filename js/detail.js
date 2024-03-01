@@ -13,14 +13,13 @@ function getAllProduct() {
 }
 // getAllProduct();
 
-function getProductById(id) {
+export function getProductById(id) {
   var promise = axios({
     url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
     method: "GET",
   });
   promise
     .then((result) => {
-      console.log(result.data.content);
       renderDetailProduct(result.data.content);
     })
     .catch((err) => {
@@ -29,7 +28,7 @@ function getProductById(id) {
 }
 getProductById(10);
 
-function renderDetailProduct(product) {
+export function renderDetailProduct(product) {
   //   var arrCategories = product.categories;
   //   //   console.log("cate", product.categories);
   //   for (var i = 0; i < arrCategories.length; i++) {
@@ -50,9 +49,9 @@ function renderDetailProduct(product) {
   //   </div>
   // </div>
   // <div class="detail_right">
-  //   <div class="categories">
+  //   <divbtnAll.text class="categories">
   //   <a>${contentCategory}</a>
-  //   </div>
+  //   </divbtnAll.text());
   //   <div class="product_title">
   //     <h1>${product.name}</h1>
   //   </div>
@@ -91,21 +90,23 @@ function getCategories(arr) {
     var category = arrCategories[i].category;
     arrCate.push(category);
     arrCate.join(", ");
-    console.log(arrCate);
     // console.log(i, category);
-    content += `<a href="">${category}, </a>`;
+    content += `<a href="" class=" category-content">${category}, </a>
+
+    `;
     // console.log(content);
   }
   //   document.querySelector(".categories").innerHTML = content;
   return content;
 }
+// let content = document.querySelectorAll(".category-content");
+console.log(content);
 function renderSizeShoes(arr) {
   var content = "";
   var arrSize = arr;
   //   console.log("cate", product.categories);
   for (var i = 0; i < arrSize.length; i++) {
     var size = arrSize[i];
-    console.log(size);
     // console.log(i, category);
     content += `<a href="" id='size_shoes'>${size} </a>`;
     // console.log(content);
