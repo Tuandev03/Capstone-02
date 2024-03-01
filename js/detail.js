@@ -91,7 +91,6 @@ function getCategories(arr) {
     var category = arrCategories[i].category;
     // arrCate.push(category);
     arrCate = arrCategories[i].category;
-    console.log(arrCate);
     // console.log(i, category);
     content += `<a href="">${category}, </a>`;
     // console.log(content);
