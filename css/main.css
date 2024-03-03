@@ -326,6 +326,144 @@ h1 {
   color: #979a9b;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.register {
+  background-image: linear-gradient(to right, white, rgb(242, 222, 222));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+@media (max-width: 1399.98px) {
+  .register {
+    height: 93.5vh;
+  }
+}
+@media (max-width: 1199.98px) {
+  .register {
+    height: 93vh;
+  }
+}
+@media (max-width: 991.98px) {
+  .register {
+    height: 93.5vh;
+  }
+}
+@media (max-width: 767.98px) {
+  .register {
+    height: 100vh;
+  }
+}
+@media (max-width: 575.98px) {
+  .register {
+    height: 100vh;
+  }
+}
+
+.container-reg {
+  max-width: 650px;
+  padding: 28px;
+  margin: 0 28px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 575.98px) {
+  .container-reg {
+    width: 450px;
+    height: 80%;
+    margin-top: 50px;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .container-reg .form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.container-reg .form-check-label {
+  margin-top: 5px;
+}
+.container-reg h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 8px;
+  border-bottom: 1px solid silver;
+}
+.container-reg .content-reg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.container-reg .content-reg input {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-bottom: 15px;
+}
+.container-reg .content-reg input:nth-child(2n) {
+  justify-content: end;
+}
+.container-reg .content-reg input input {
+  height: 40px;
+  width: 95%;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.container-reg .content-reg input input :is(:focus, :valid) {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container-reg .button-container {
+  margin: 15px 0;
+}
+.container-reg .button-container button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  display: block;
+  font-size: 20px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, white, rgb(242, 222, 222));
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container-reg .button-container button:hover {
+  background: linear-gradient(to left, white, rgb(242, 222, 222));
+}
+@media (max-width: 575.98px) {
+  .container-reg .form-control {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .container-reg .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 575.98px) {
+  .container-reg .form-col {
+    width: 100%;
+    padding: 0 !important;
+  }
+}
+
 .branch-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
