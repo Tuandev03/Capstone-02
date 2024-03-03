@@ -162,12 +162,37 @@ h1 {
   font-family: sans-serif;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.register {
   background-image: linear-gradient(to right, white, rgb(242, 222, 222));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+@media (max-width: 1399.98px) {
+  .register {
+    height: 93.5vh;
+  }
+}
+@media (max-width: 1199.98px) {
+  .register {
+    height: 93vh;
+  }
+}
+@media (max-width: 991.98px) {
+  .register {
+    height: 93.5vh;
+  }
+}
+@media (max-width: 767.98px) {
+  .register {
+    height: 100vh;
+  }
+}
+@media (max-width: 575.98px) {
+  .register {
+    height: 100vh;
+  }
 }
 
 .container-reg {
@@ -182,9 +207,9 @@ main {
 @media (max-width: 575.98px) {
   .container-reg {
     width: 450px;
-    height: 380px;
+    height: 80%;
     margin-top: 50px;
-    overflow: scroll;
+    overflow-y: auto;
   }
 }
 @media (max-width: 767.98px) {
@@ -192,6 +217,9 @@ main {
     display: grid;
     grid-template-columns: 1fr;
   }
+}
+.container-reg .form-check-label {
+  margin-top: 5px;
 }
 .container-reg h2 {
   text-align: center;
