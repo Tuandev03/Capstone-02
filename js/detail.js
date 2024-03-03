@@ -1,3 +1,5 @@
+// import { getValueProduct } from "../main.js";
+
 function getAllProduct() {
   var promise = axios({
     url: "https://shop.cyberlearn.vn/api/Product",
@@ -14,6 +16,8 @@ function getAllProduct() {
 // getAllProduct();
 
 export function getProductById(id) {
+  // console.log(url);
+
   var promise = axios({
     url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
     method: "GET",
@@ -21,24 +25,20 @@ export function getProductById(id) {
   promise
     .then((result) => {
       renderDetailProduct(result.data.content);
+      
+      
     })
     .catch((err) => {
-      console.log(err.status);
+      // console.log(err.status);
     });
 }
-getProductById(10);
+getProductById(8);
 
 export function renderDetailProduct(product) {
-  //   var arrCategories = product.categories;
-  //   //   console.log("cate", product.categories);
-  //   for (var i = 0; i < arrCategories.length; i++) {
-  //     var category = arrCategories[i].category;
-  //     console.log(i, category);
-  //   }
   var contentCategory = getCategories(product.categories);
   var sizeShoes = renderSizeShoes(product.size);
   var relatedProduct = renderRelatedProduct(product.relatedProducts);
-  //   console.log(contentCategory);
+
   //   var content = `
   //   <div class="detail_left">
   //   <div class="product_img">
@@ -80,6 +80,7 @@ export function renderDetailProduct(product) {
 
   document.querySelector(".shoes_sizes").innerHTML = sizeShoes;
   document.querySelector(".related_product_list").innerHTML = relatedProduct;
+  window.location.href = `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`;
 }
 function getCategories(arr) {
   var arrCate = [];
@@ -96,11 +97,13 @@ function getCategories(arr) {
     `;
     // console.log(content);
   }
+  window.location.href = `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`;
+
   //   document.querySelector(".categories").innerHTML = content;
   return content;
 }
 // let content = document.querySelectorAll(".category-content");
-console.log(content);
+// console.log(content);
 function renderSizeShoes(arr) {
   var content = "";
   var arrSize = arr;
