@@ -6,6 +6,9 @@ $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1500px;
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
   width: 100%;
   background-color: #fff;
   @media (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {

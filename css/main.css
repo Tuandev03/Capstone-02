@@ -670,11 +670,12 @@ h1 {
 }
 .seller-heading {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .seller-link {
   position: relative;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 16px;
 }
 .seller-link::after {
   content: "";
@@ -928,6 +929,9 @@ h1 {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
   width: 100%;
   background-color: #fff;
   box-shadow: -1px 2px 29px 0px rgba(0, 0, 0, 0.32);
