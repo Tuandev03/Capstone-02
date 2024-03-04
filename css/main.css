@@ -162,10 +162,17 @@ h1 {
   gap: 50px;
 }
 
+.detail_left {
+  width: 50%;
+}
 .detail_left img {
+  width: 100%;
   background: #f1f1ef;
 }
 
+.detail_right {
+  width: 50%;
+}
 .detail_right .categories {
   display: block;
   line-height: 1;
@@ -176,8 +183,12 @@ h1 {
   text-transform: capitalize;
   color: #6e7051;
 }
+.detail_right .categories a:hover {
+  color: black;
+}
 .detail_right .product_title h1 {
   font-size: 26px;
+  font-weight: 600;
   color: #262b2c;
   margin: 0 0 13px 0;
 }
@@ -213,7 +224,10 @@ h1 {
 }
 .detail_right form .shoes_sizes #size_shoes {
   border: 1px solid #6e7051;
-  padding: 10px 15px;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  line-height: 2.5;
   display: inline-block;
   transition: all 0.3s;
 }
@@ -228,9 +242,13 @@ h1 {
   background: #6e7051;
   color: white;
   border-color: #6e7051;
-  padding: 10px 15px;
+  padding: 10px 20px;
   margin-bottom: 1rem;
   font-weight: 600;
+  transition: all 0.4s;
+}
+.detail_right form button[name=add_to_cart]:hover {
+  background: black;
 }
 .detail_right .product_categories {
   border-top: 1px solid #dddddd;
@@ -250,13 +268,11 @@ h1 {
 .related_product .related_product_content .related_product_list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   row-gap: 40px;
 }
 .related_product .related_product_content .related_product_item {
   position: relative;
-  margin-bottom: 50px;
 }
 .related_product .related_product_content .related_product_item .sale_circle {
   position: absolute;
@@ -276,10 +292,11 @@ h1 {
 .related_product .related_product_content .related_product_item .related_product_media {
   position: relative;
   overflow: hidden;
+  text-align: center;
+  background: #f1f1ef;
 }
 .related_product .related_product_content .related_product_item .related_product_media .related_link img {
-  background: #f1f1ef;
-  width: 100%;
+  width: 80%;
   border-radius: 6px 6px 0 0;
 }
 .related_product .related_product_content .related_product_item .related_product_media .quick_view_btn {
@@ -312,25 +329,21 @@ h1 {
 }
 .related_product .related_product_content .related_product_item .related_product_info .price {
   margin-bottom: 10px;
+  font-size: 16px;
 }
 .related_product .related_product_content .related_product_item .related_product_info .price .product_price {
   color: #979a9b;
-  font-size: 16px;
   font-weight: 500;
 }
 .related_product .related_product_content .related_product_item .related_product_info .price .old_price {
   opacity: 0.5;
 }
-.related_product .related_product_content .related_product_item .related_product_rate {
-  text-align: center;
+.related_product .related_product_content .related_product_item .related_product_info .related_product_rate {
   color: #979a9b;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+.footer {
+  padding: 70px 0;
 }
 
 .register {

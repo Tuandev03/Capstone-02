@@ -1,5 +1,3 @@
-// import { getValueProduct } from "../main.js";
-
 function getAllProduct() {
   var promise = axios({
     url: "https://shop.cyberlearn.vn/api/Product",
@@ -15,30 +13,33 @@ function getAllProduct() {
 }
 // getAllProduct();
 
-export function getProductById(id) {
-  // console.log(url);
-
+function getProductById(id) {
   var promise = axios({
     url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
     method: "GET",
   });
   promise
     .then((result) => {
+      console.log(result.data.content);
       renderDetailProduct(result.data.content);
-      
-      
     })
     .catch((err) => {
-      // console.log(err.status);
+      console.log(err.status);
     });
 }
-getProductById(8);
+getProductById(10);
 
-export function renderDetailProduct(product) {
+function renderDetailProduct(product) {
+  //   var arrCategories = product.categories;
+  //   //   console.log("cate", product.categories);
+  //   for (var i = 0; i < arrCategories.length; i++) {
+  //     var category = arrCategories[i].category;
+  //     console.log(i, category);
+  //   }
   var contentCategory = getCategories(product.categories);
   var sizeShoes = renderSizeShoes(product.size);
   var relatedProduct = renderRelatedProduct(product.relatedProducts);
-
+  //   console.log(contentCategory);
   //   var content = `
   //   <div class="detail_left">
   //   <div class="product_img">
@@ -49,9 +50,9 @@ export function renderDetailProduct(product) {
   //   </div>
   // </div>
   // <div class="detail_right">
-  //   <divbtnAll.text class="categories">
+  //   <div class="categories">
   //   <a>${contentCategory}</a>
-  //   </divbtnAll.text());
+  //   </div>
   //   <div class="product_title">
   //     <h1>${product.name}</h1>
   //   </div>
@@ -80,36 +81,30 @@ export function renderDetailProduct(product) {
 
   document.querySelector(".shoes_sizes").innerHTML = sizeShoes;
   document.querySelector(".related_product_list").innerHTML = relatedProduct;
-  window.location.href = `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`;
 }
 function getCategories(arr) {
-  var arrCate = [];
+  var arrCate = "";
   var content = "";
   var arrCategories = arr;
   //   console.log("cate", product.categories);
   for (var i = 0; i < arrCategories.length; i++) {
     var category = arrCategories[i].category;
-    arrCate.push(category);
-    arrCate.join(", ");
+    // arrCate.push(category);
+    arrCate = arrCategories[i].category;
     // console.log(i, category);
-    content += `<a href="" class=" category-content">${category}, </a>
-
-    `;
+    content += `<a href="">${category}, </a>`;
     // console.log(content);
   }
-  window.location.href = `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`;
-
   //   document.querySelector(".categories").innerHTML = content;
   return content;
 }
-// let content = document.querySelectorAll(".category-content");
-// console.log(content);
 function renderSizeShoes(arr) {
   var content = "";
   var arrSize = arr;
   //   console.log("cate", product.categories);
   for (var i = 0; i < arrSize.length; i++) {
     var size = arrSize[i];
+    // console.log(size);
     // console.log(i, category);
     content += `<a href="" id='size_shoes'>${size} </a>`;
     // console.log(content);
@@ -136,11 +131,10 @@ function renderRelatedProduct(arr) {
     <div class="related_product_info">
       <p class="product_name">${relatedProduct.name}</p>
       <div class="price">
-        <del class="old_price product_price">${relatedProduct.price + 50}</del>
-        <span class="product_price">${relatedProduct.price}</span>
+        <del class="old_price product_price">$${relatedProduct.price + 50}</del>
+        <span class="product_price">$${relatedProduct.price}</span>
       </div>
-    </div>
-    <ul class="related_product_rate">
+      <ul class="related_product_rate">
       <li class="related_product_rate-item">
         <div class="rating_star">
           <i class="fa-regular fa-star related_product_icon"></i>
@@ -151,6 +145,8 @@ function renderRelatedProduct(arr) {
         </div>
       </li>
     </ul>
+    </div>
+    
   </li>`;
   }
   return content;
