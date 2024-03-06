@@ -4,6 +4,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
+  3xl: 2500px,
 );
 
 @mixin screen($key) {

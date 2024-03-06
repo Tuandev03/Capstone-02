@@ -268,7 +268,8 @@ h1 {
 .related_product .related_product_content .related_product_list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 40px;
 }
 .related_product .related_product_content .related_product_item {
@@ -342,8 +343,89 @@ h1 {
   color: #979a9b;
 }
 
-.footer {
-  padding: 70px 0;
+@media (max-width: 768px) {
+  .detail_content {
+    display: block;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  .detail_content .detail_left {
+    width: 100%;
+  }
+  .detail_content .detail_left img {
+    margin-bottom: 40px;
+  }
+  .detail_content .detail_right {
+    width: 100%;
+  }
+  .detail_content .detail_right .categories a {
+    font-size: 14px;
+  }
+  .detail_content .detail_right .product_title h1 {
+    font-size: 26px;
+  }
+  .detail_content .detail_right .product_price del {
+    font-size: 1.4rem;
+  }
+  .detail_content .detail_right .product_price span {
+    font-size: 1.5rem;
+  }
+  .detail_content .detail_right .shipping_text {
+    font-size: 1rem;
+  }
+  .detail_content .detail_right .product_description {
+    font-size: 16px;
+  }
+  .detail_content .detail_right form {
+    display: block;
+  }
+  .detail_content .detail_right form .shoes_sizes #size_shoes {
+    width: 40px;
+    height: 32px;
+    padding: 0;
+    text-align: center;
+    line-height: 2;
+  }
+  .related_product h2 {
+    font-size: 2rem;
+  }
+  .related_product .related_product_content .related_product_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .related_product .related_product_content .related_product_list .related_product_item .sale_circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.8rem;
+  }
+  .related_product .related_product_content .related_product_list .related_product_item .related_product_media .related_link img {
+    width: 80%;
+  }
+  .related_product .related_product_content .related_product_list .related_product_item .related_product_media .quick_view_btn {
+    font-size: 14px;
+    line-height: 2;
+  }
+  .related_product .related_product_content .related_product_list .related_product_item .related_product_info {
+    text-align: left;
+  }
+  .related_product .related_product_content .related_product_list .related_product_item .related_product_info .product_name {
+    font-size: 14px;
+  }
+  .related_product .related_product_content .related_product_list .related_product_item .related_product_info .price {
+    font-size: 13px;
+  }
+  .related_product .related_product_content .related_product_list .related_product_item .related_product_info .price .old_price {
+    opacity: 0.5;
+  }
+  .related_product .related_product_content .related_product_list .related_product_item .related_product_rate {
+    font-size: 13px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .register {
@@ -351,22 +433,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
-}
-@media (max-width: 1399.98px) {
-  .register {
-    height: 93.5vh;
-  }
-}
-@media (max-width: 1199.98px) {
-  .register {
-    height: 93vh;
-  }
-}
-@media (max-width: 991.98px) {
-  .register {
-    height: 93.5vh;
-  }
+  height: 100vh;
 }
 @media (max-width: 767.98px) {
   .register {

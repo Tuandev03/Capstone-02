@@ -1,10 +1,4 @@
-// import { getProductById } from "./js/detail.js";
-
-
-
-// import { getProductById, renderDetailProduct } from "./js/detail.js";
-
-export function getValueProduct() {
+function getValueProduct() {
   let promise = axios({
     url: "https://shop.cyberlearn.vn/api/Product",
     method: "GET",
@@ -17,7 +11,7 @@ export function getValueProduct() {
           return `<li class="seller-item">
         <div class="seller-media">
         <img class="seller-img" src="${product.image}" alt=""></img>
-        <a href="#" id="quick-view" class="seller-btn" ">Quick View</a>
+        <a href="" id="quick-view" class="seller-btn" ">Quick View</a>
         </div>
             <div class="seller-content">
             <p class="seller-name">${product.name}</p>
@@ -41,14 +35,15 @@ export function getValueProduct() {
             `;
         })
         .join("");
-      document.querySelectorAll(".seller-btn").forEach((item) => {
+
+      document.querySelectorAll(".seller-btn").forEach((item, index) => {
         item.addEventListener("click", (event) => {
           event.preventDefault();
-          let urlParam = new URLSearchParams(window.location.search);
-          let id = urlParam.get("idGiay");
-          window.location.href = `./pages/detail.html?idGiay=${id}`;
+          // Lấy id của sản phẩm được click
+          let id = response.data.content[index].id;
           console.log(id);
-          // renderDetailProduct(result.data.content)
+          // Chuyển hướng người dùng đến trang chi tiết sản phẩm với id tương ứng
+          window.location.href = `../pages/detail.html?id=${id}`;
         });
       });
     })

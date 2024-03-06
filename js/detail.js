@@ -4,71 +4,68 @@ function getAllProduct() {
     method: "GET",
   });
   promise
-    .then((result) => {
-      console.log(result.data.content);
-    })
+    .then((result) => {})
     .catch((err) => {
       console.log(err);
     });
 }
+
 // getAllProduct();
+// export async function hienThiChiTietGiay(id) {
+//   try {
+//     let result = await axios({
+//       url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
+//       method: "GET",
+//     });
+//     console.log(result.data.content);
 
-function getProductById(id) {
-  var promise = axios({
-    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
-    method: "GET",
-  });
-  promise
-    .then((result) => {
-      console.log(result.data.content);
-      renderDetailProduct(result.data.content);
-    })
-    .catch((err) => {
-      console.log(err.status);
+//     renderDetailProduct(result.data.content);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// hienThiChiTietGiay(10);
+// export function getProductById(id) {
+//   var promise = axios({
+//     url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
+//     method: "GET",
+//   });
+//   promise
+//   .then((result) => {
+//       let url = new URLSearchParams(window.location.search);
+//       let id = url.get("id");
+
+//       // console.log(id);
+//     })
+//     .catch((err) => {
+//       console.log(err.status);
+//     });
+// }
+// getProductById(11);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("id");
+
+  getProductDetail(productId);
+});
+async function getProductDetail(productId) {
+  try {
+    let result = await axios({
+      url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${productId}`,
+      method: "GET",
     });
+    // Render thông tin chi tiết sản phẩm lên trang
+    renderDetailProduct(result.data.content);
+  } catch (error) {
+    console.log(error);
+  }
 }
-getProductById(10);
-
 function renderDetailProduct(product) {
-  //   var arrCategories = product.categories;
-  //   //   console.log("cate", product.categories);
-  //   for (var i = 0; i < arrCategories.length; i++) {
-  //     var category = arrCategories[i].category;
-  //     console.log(i, category);
-  //   }
   var contentCategory = getCategories(product.categories);
   var sizeShoes = renderSizeShoes(product.size);
   var relatedProduct = renderRelatedProduct(product.relatedProducts);
-  //   console.log(contentCategory);
-  //   var content = `
-  //   <div class="detail_left">
-  //   <div class="product_img">
-  //     <img
-  //       src="${product.image}"
-  //       alt="productDetail_img"
-  //     />
-  //   </div>
-  // </div>
-  // <div class="detail_right">
-  //   <div class="categories">
-  //   <a>${contentCategory}</a>
-  //   </div>
-  //   <div class="product_title">
-  //     <h1>${product.name}</h1>
-  //   </div>
-  //   <p class="product_price">
-  //     <del>$${product.price + 50}.00</del>
-  //     <span>$${product.price}.00</span>
-  //   </p>
-  //   <span class="shipping_text"> & Free Shipping</span>
-  //   <div class="product_description">${product.description}</div>
-  //   <div class="product_categories">
-  //     <span class="posted_in">
-  //     Categories:
-  //     </span>
-  //   </div>
-  // </div>
-  //   `;
+
   document.getElementById("product_img").src = product.image;
   document.querySelector(".categories a").innerHTML = contentCategory;
 

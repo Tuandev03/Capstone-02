@@ -21,16 +21,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
-  @include abstracts.screen(xxl) {
-    height: 93.5vh;
-  }
-  @include abstracts.screen(xl) {
-    height: 93vh;
-  }
-  @include abstracts.screen(lg) {
-    height: 93.5vh;
-  }
+  height: 100vh;
+
   @include abstracts.screen(md) {
     height: 100vh;
   }
