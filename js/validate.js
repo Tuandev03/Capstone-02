@@ -63,7 +63,7 @@ function kiemTraPass(valuePass, idNoti) {
       valid = valid && false;
       document.getElementById(idNoti).style.display = "inline-block";
       document.getElementById(idNoti).innerHTML =
-        "Mật khẩu phải có ít nhất 1 kí tự in hoa, 1 chữ số và 1 kí tự đặc biệt";
+        "Mật khẩu phải có ít nhất 1 kí tự in hoa, thường, chữ số và kí tự đặc biệt";
     }
   }
   return valid;
