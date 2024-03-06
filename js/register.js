@@ -66,7 +66,7 @@ function SignUp() {
       console.log(result);
       displayNotification("Đăng ký thành công!"); // Hiển thị thông báo
       setTimeout(function () {
-        window.location.href = "index.html"; // Chuyển hướng sau 2 giây
+        window.location.href = "../index.html"; // Chuyển hướng sau 2 giây
       }, 2000);
     });
     console.log(promise.content).catch(function (err) {
