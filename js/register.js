@@ -85,7 +85,7 @@ function displayNotification(message) {
     position: "right",
 
     style: {
-      background: "red",
+      background: "green",
       color: "white",
       padding: "10px",
     },
