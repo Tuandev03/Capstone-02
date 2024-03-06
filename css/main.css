@@ -1104,9 +1104,9 @@ h1 {
   content: "";
   position: absolute;
   bottom: -30px;
-  left: -15px;
+  left: 14px;
   display: inline-block;
-  width: 100px;
+  width: 28px;
   height: 30px;
   z-index: 10;
 }
