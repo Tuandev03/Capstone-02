@@ -9,5 +9,5 @@
 | :-: | :---------------------: | ---------- | ------------ |
 |  1  |        Header + Footer  | Tuấn       | ✅           |
 |  3  |  index.html + Query param| Tuấn      | ✅           |
-|  4  |        register.html    | Uy         | ✅           |
+|  4  |  register.html + Quay video    | Uy         | ✅           |
 |  5  |        detail.html      | Dũng       | ✅           |
