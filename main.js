@@ -43,7 +43,7 @@ function getValueProduct() {
           let id = response.data.content[index].id;
           console.log(id);
           // Chuyển hướng người dùng đến trang chi tiết sản phẩm với id tương ứng
-          window.location.href = `../pages/detail.html?id=${id}`;
+          window.location.href = `./pages/detail.html?id=${id}`;
         });
       });
     })
