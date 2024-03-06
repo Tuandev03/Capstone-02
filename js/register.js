@@ -81,10 +81,14 @@ function displayNotification(message) {
     text: message,
     duration: 2000,
     close: true,
-    gravity: "top",
     position: "right",
+    offset: {
+      x: "",
+      y: 60,
+    },
 
     style: {
+      position: "relative",
       background: "green",
       color: "white",
       padding: "10px",
